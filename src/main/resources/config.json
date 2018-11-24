@@ -1,0 +1,66 @@
+{
+  "warFileName": "ROOT.war",
+  "strategy": {
+    "default": "all",
+    "include": "AnHui|ShanDong|LiaoNing|HeBei",
+    "exclude": "HuNan|ShanDong|SiChuan",
+    "active": "default"
+  },
+  "configuration": [
+    {
+      "generateFolder": "AnHui",
+      "items": [
+        {
+          "configFileName": "/WEB-INF/web.xml",
+          "13": "  <!-- 把第13行修改成本字符串 -->",
+          "15-17": "  <!-- 把15到17行都改成本字符串 -->",
+          "24": "    	<param-value>安徽</param-value>",
+          "10": "  	<param-value>Hello, AnHui</param-value>"
+        },
+        {
+          "configFileName": "/WEB-INF/classes/db.properties",
+          "4-6": [
+            "jdbc.driverClassName=com.mysql.jdbc.Driver",
+            "jdbc.url=jdbc:mysql://www.anhui.com:3306/AnHui",
+            "jdbc.username=hxulin"
+          ],
+          "8": "jdbc.password=hxulin001"
+        }
+      ]
+    },
+    {
+      "generateFolder": "ShanDong",
+      "items": [
+        {
+          "configFileName": "/WEB-INF/web.xml",
+          "10": "  	<param-value>Hello, ShanDong</param-value>",
+          "13": "  <!-- 把第13行修改成本字符串 -->",
+          "15-17": "  <!-- 把15到17行都改成本字符串 -->",
+          "24": "    	<param-value>山东</param-value>"
+        },
+        {
+          "configFileName": "/WEB-INF/classes/db.properties",
+          "4-8": [
+            "jdbc.driverClassName=com.mysql.jdbc.Driver",
+            "jdbc.url=jdbc:mysql://www.shandong.com:3306/ShanDong",
+            "jdbc.username=hxulin",
+            "",
+            "jdbc.password=hxulin002"
+          ]
+        }
+      ]
+    },
+    {
+      "generateFolder": "SiChuan",
+      "items": [
+        {
+          "configFileName": "/WEB-INF/classes/db.properties",
+          "4": "jdbc.driverClassName=四川的配置文件",
+          "5": "jdbc.url=只修改了db.properties文件",
+          "6": "jdbc.username=web.xml文件将使用默认War包的文件",
+          "8": "jdbc.password=<a href='https://github.com/hxulin' target='_blank'>https://github.com/hxulin</a>"
+        }
+      ]
+    }
+  ]
+}

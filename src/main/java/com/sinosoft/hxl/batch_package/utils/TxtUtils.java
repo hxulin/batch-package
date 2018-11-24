@@ -37,7 +37,14 @@ public final class TxtUtils {
                 linesData.add(line);
             }
             br.close();
-//            linesData.add("");
+            // 判断最后一行是否为空行，最后一个空行需要单独处理
+            RandomAccessFile raf = new RandomAccessFile(txtFile, "r");
+            raf.seek(raf.length() - 1);
+            line = raf.readLine();
+            raf.close();
+            if (line.length() == 0) {
+                linesData.add("");
+            }
         }
         return linesData;
     }
