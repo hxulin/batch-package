@@ -1,5 +1,5 @@
 # batch-package
-War包批量生成工具，可动态修改War包中的文本内容（如数据库连接信息），修改后进行二次打包
+War包批量复制工具，可动态修改War包中的文本内容（如数据库连接信息），修改后进行二次打包
 
 **Example：将War文件复制10份（批量部署），需要修改其中的db.properties配置文件**
 
@@ -25,7 +25,7 @@ War包批量生成工具，可动态修改War包中的文本内容（如数据�
 
    此时在你的目录中会生成 \_bak，\_gen，\_tmp三个目录，**\_gen目录中就存放着最终生成的文件**。
 
-   &emsp;&emsp;以上是一个快速的测试用例。你可以查看配置文件config.json以及最终生成的文件，了解它的配置方法。当然\_gen目录中测试生成的每一个ROOT.war也是可以直接放到Tomcat中运行并访问的。
+   &emsp;&emsp;以上是一个快速的测试用例。你可以查看配置文件config.json以及最终生成的文件，了解它的配置方法。\_gen目录中测试生成的每一个ROOT.war是可以直接放到Tomcat中运行并访问的。
 
 3. 将你的 ROOT.war 文件放到解压目录中（原有的ROOT.war是测试文件，可以覆盖）
 
@@ -35,5 +35,5 @@ War包批量生成工具，可动态修改War包中的文本内容（如数据�
 
 <br>
 
-**生成策略等高级配置，详见[这里](https://ldxy.tech/2018/11/25/batch-package/)**
+**生成策略等高级配置，详见 [https://huangxulin.cn/2018/11/25/batch-package/](https://huangxulin.cn/2018/11/25/batch-package/)**
 
